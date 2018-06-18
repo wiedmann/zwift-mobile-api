@@ -37,6 +37,18 @@ profile.followees().then(followees => {
     console.log(followees); // JSON array of rider's followees
 });
 
+// Give a RideOn (from 'playerId' to 'otherRiderId')
+// Can lookup 'activityId' from 'currentActivityId' of profile() response
+profile.giveRideOn(otherRiderId, activityId);
+
+// Retrieve the goals you have
+profile.goals().then(goal=> {
+    console.log(goal); //JSON array of goals
+})
+
+// Delete a goal; goalID is printed from getGoals()
+goalID = 200147
+prof.deleteGoal(goalID)
 ```
 
 ## List Riders
